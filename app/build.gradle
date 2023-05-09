@@ -29,15 +29,35 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.kembrij.smarthomeapp'
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    //Android core
+    implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Room
+    def room_version = "2.4.3"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+
+    //Glide images
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+
+    //Picasso images
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //MQTT
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+    implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.4'
+    implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+
 }

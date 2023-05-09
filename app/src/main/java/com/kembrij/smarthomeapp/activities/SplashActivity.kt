@@ -17,7 +17,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        @Suppress("DEPRECATION")
         window.insetsController?.hide(WindowInsets.Type.statusBars())
 
         Handler(Looper.getMainLooper()).postDelayed({

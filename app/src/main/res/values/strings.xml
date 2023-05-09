@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Умный дом</string>
+    <string name="btn_rooms_text">Комнаты</string>
+    <string name="btn_devices_text">устройства</string>
 </resources>

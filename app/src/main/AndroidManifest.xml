@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.kembrij.smarthomeapp">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -10,14 +9,13 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Smarthomeapp"
-        tools:targetApi="31">
+        android:theme="@style/Theme.Smarthomeapp">
 
         <activity
             android:name="com.kembrij.smarthomeapp.activities.SplashActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeSplash">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +26,9 @@
         <activity
             android:name="com.kembrij.smarthomeapp.activities.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark.NoActionBar" />
+
     </application>
 
 </manifest>
