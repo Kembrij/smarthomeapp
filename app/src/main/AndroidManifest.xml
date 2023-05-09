@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Smarthomeapp">
 
         <activity
-            android:name="com.kembrij.smarthomeapp.activities.SplashActivity"
+            android:name="com.kembrij.smarthomeapp.ui.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeSplash">
@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name="com.kembrij.smarthomeapp.activities.MainActivity"
+            android:name="com.kembrij.smarthomeapp.ui.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeDark.NoActionBar" />

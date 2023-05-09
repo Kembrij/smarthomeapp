@@ -1,4 +1,4 @@
-package com.kembrij.smarthomeapp.activities
+package com.kembrij.smarthomeapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

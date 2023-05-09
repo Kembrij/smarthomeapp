@@ -1,12 +1,10 @@
-package com.kembrij.smarthomeapp.activities
+package com.kembrij.smarthomeapp.ui
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowInsets
 import com.kembrij.smarthomeapp.R
-import android.view.WindowManager
 
 import android.os.Handler
 import android.os.Looper
