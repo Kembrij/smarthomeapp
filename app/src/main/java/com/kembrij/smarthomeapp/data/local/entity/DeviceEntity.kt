@@ -18,7 +18,7 @@ import java.time.LocalDateTime
         ),
         ForeignKey(
             entity = DeviceTypeEntity::class,
-            parentColumns = ["device_type"],
+            parentColumns = ["device_type_id"],
             childColumns = ["device_type"],
             onDelete = ForeignKey.CASCADE
         )
