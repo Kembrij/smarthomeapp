@@ -6,7 +6,6 @@ import androidx.room.ForeignKey
 import java.time.LocalDateTime
 
 
-
 @Entity(
     tableName = "devices",
     foreignKeys = [
@@ -34,4 +33,4 @@ data class DeviceEntity(
     val time_activated: LocalDateTime,
     val time_deactivated: LocalDateTime,
     val is_active: Boolean
-    )
+)

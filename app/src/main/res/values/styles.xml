@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<!--<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppThemeSplash" parent="Theme.MaterialComponents.Light">
         <item name="android:windowBackground">@drawable/ic_splash_background</item>
         <item name="windowActionBar">false</item>
@@ -17,4 +17,18 @@
     <style name="AppTheme.GrayStatusBar" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimaryDark">@color/colorGray</item>
     </style>
+</resources>-->
+
+<resources>
+    <style name="RoundedImageView">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="submitBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="searchHintIcon">@null</item>
+    </style>
+
 </resources>

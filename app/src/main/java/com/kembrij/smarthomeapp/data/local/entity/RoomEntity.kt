@@ -15,6 +15,7 @@ import androidx.room.ForeignKey
         )
     ]
 )
+//
 data class RoomEntity(
     @PrimaryKey(autoGenerate = true) val room_Id: Long = 0,
     val room_name: String,
