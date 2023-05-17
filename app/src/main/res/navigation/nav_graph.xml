@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/nav_graph"
-    app:startDestination="@id/login_fragment">
+    app:startDestination="@id/home_fragment">
 
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.kembrij.smarthomeapp.ui.login_screen.LoginFragment"
-        android:label="Login"
+        android:label="Home"
         tools:layout="@layout/login_fragment">
 
         <argument
