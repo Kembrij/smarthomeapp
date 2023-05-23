@@ -1,5 +1,6 @@
 package com.kembrij.smarthomeapp.data.local.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
@@ -10,27 +11,41 @@ import java.time.LocalDateTime
     tableName = "devices",
     foreignKeys = [
         ForeignKey(
-            entity = SmartHomeEntity::class,
-            parentColumns = ["smarthomeId"],
-            childColumns = ["home_Id"],
-            onDelete = ForeignKey.CASCADE
-        ),
-        ForeignKey(
-            entity = DeviceTypeEntity::class,
-            parentColumns = ["device_type_id"],
-            childColumns = ["device_type"],
+            entity = RoomEntity::class,
+            parentColumns = ["room_Id_Pk"],
+            childColumns = ["room_Id_Fk"],
             onDelete = ForeignKey.CASCADE
         )
     ]
 )
 data class DeviceEntity(
-    @PrimaryKey(autoGenerate = true) val deviceId: Long = 0,
-    val home_Id: Long,
-    val room_Id: Long,
-    val device_parameters: String,
-    val device_type: Int,
-    val current_status: String,
-    val time_activated: LocalDateTime,
-    val time_deactivated: LocalDateTime,
-    val is_active: Boolean
+    @PrimaryKey(autoGenerate = true) val uid: Int = 0,
+
+    @ColumnInfo(name = "roomId")
+    val room_Id_Fk: Int,
+
+    @ColumnInfo(name = "name")
+    var name: String? = null,
+
+    @ColumnInfo(name = "type")
+    var type: String? = null,
+
+    @ColumnInfo(name = "topic")
+    var topic: String? = null,
+
+    @ColumnInfo(name = "payloadActive")
+    var payloadActive: String? = null,
+
+    @ColumnInfo(name = "payloadInactive")
+    var payloadInactive: String? = null,
+
+    @ColumnInfo(name = "payload")
+    var payload: String? = null,
+
+    @ColumnInfo(name = "notify")
+    var notify: Boolean = false,
+
+    @ColumnInfo(name = "alarmMode")
+    var alarmMode: Boolean = false
+
 )

@@ -1,5 +1,6 @@
 package com.kembrij.smarthomeapp.data.local.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.ForeignKey
@@ -9,16 +10,18 @@ import androidx.room.ForeignKey
     foreignKeys = [
         ForeignKey(
             entity = UserAccountEntity::class,
-            parentColumns = ["accountId"],
-            childColumns = ["user_account_id"],
+            parentColumns = ["account_Id_Pk"],
+            childColumns = ["user_account_Id_Fk"],
             onDelete = ForeignKey.CASCADE
         )
     ]
 )
 data class SmartHomeEntity(
-    @PrimaryKey(autoGenerate = true) val smarthomeId: Long = 0,
-    val user_account_id: Long,
-    val home_name: String,
-    val address: String,
-    val details: String
+    @PrimaryKey(autoGenerate = true) val smart_home_Id_Pk: Int = 0,
+
+    @ColumnInfo(name = "userAccountId")
+    val user_account_Id_Fk: Int? = 0,
+
+    @ColumnInfo(name = "homeName")
+    val home_name: String? = null
 )

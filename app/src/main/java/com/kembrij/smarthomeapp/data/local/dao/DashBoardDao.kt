@@ -2,15 +2,13 @@ package com.kembrij.smarthomeapp.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
-import androidx.room.Query
-import com.kembrij.smarthomeapp.data.local.entity.DeviceEntity
+import com.kembrij.smarthomeapp.data.local.entity.DashBoardEntity
 import com.kembrij.smarthomeapp.data.local.entity.RoomEntity
 import com.kembrij.smarthomeapp.data.local.entity.SmartHomeEntity
-import com.kembrij.smarthomeapp.data.local.entity.UserAccountEntity
 
 @Dao
-interface UserAccountDao {
+interface DashBoardDao {
 
     @Insert
-    suspend fun insert(room: UserAccountEntity)
+    suspend fun insert(room: DashBoardEntity)
 }

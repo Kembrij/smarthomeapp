@@ -1,10 +1,17 @@
 buildscript {
+    ext {
+        kotlin_version = '1.8.21'
+    }
     dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         def nav_version = "2.5.3"
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.45'
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+    }
+    repositories {
+        mavenCentral()
     }
 }
 
