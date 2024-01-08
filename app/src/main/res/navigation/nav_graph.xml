@@ -4,107 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/nav_graph"
-    app:startDestination="@id/home_fragment">
+    app:startDestination="@id/homeFragment">
+
 
     <fragment
-        android:id="@+id/login_fragment"
-        android:name="com.kembrij.smarthomeapp.ui.login_screen.LoginFragment"
-        android:label="Home"
-        tools:layout="@layout/login_fragment">
-
-        <argument
-            android:name="username"
-            android:defaultValue="@null"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="password"
-            android:defaultValue="@null"
-            app:argType="string"
-            app:nullable="true" />
-
+        android:id="@+id/sensorFragment"
+        android:name="com.kembrij.smarthomeapp.ui.sensor_screen.SensorFragment"
+        android:label="fragment_sensors"
+        tools:layout="@layout/fragment_sensors" >
         <action
-            android:id="@+id/action_login_fragment_to_home_fragment"
-            app:destination="@id/home_fragment"
-            app:popUpTo="@id/login_fragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_login_fragment_to_registration_fragment"
-            app:destination="@id/registration_fragment"
-            app:popUpTo="@id/login_fragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_sensorFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/registration_fragment"
-        android:name="com.kembrij.smarthomeapp.ui.registration_screen.RegistrationFragment"
-        android:label="Registration"
-        tools:layout="@layout/registration_fragment">
-
-        <argument
-            android:name="username"
-            android:defaultValue="@null"
-            app:argType="string"
-            app:nullable="true" />
-        <argument
-            android:name="password"
-            android:defaultValue="@null"
-            app:argType="string"
-            app:nullable="true" />
-
+        android:id="@+id/actuatorFragment"
+        android:name="com.kembrij.smarthomeapp.ui.actuator_screen.ActuatorFragment"
+        android:label="fragment_actuators"
+        tools:layout="@layout/fragment_actuators" >
         <action
-            android:id="@+id/action_registration_fragment_to_login_fragment"
-            app:destination="@id/login_fragment"
-            app:popUpTo="@id/registration_fragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_registration_fragment_to_home_fragment"
-            app:destination="@id/home_fragment"
-            app:popUpTo="@id/registration_fragment"
-            app:popUpToInclusive="true" />
-    </fragment>
-
-
-    <fragment
-        android:id="@+id/home_fragment"
-        android:name="com.kembrij.smarthomeapp.ui.home_screen.HomeFragment"
-        android:label="Home"
-        tools:layout="@layout/home_fragment">
-
-        <action
-            android:id="@+id/action_map_fragment_to_login_fragment"
-            app:destination="@id/login_fragment" />
-        <action
-            android:id="@+id/action_home_fragment_to_scripts_fragment"
-            app:destination="@id/script_fragment" />
-        <action
-            android:id="@+id/action_home_fragment_to_statistics_fragment"
-            app:destination="@id/statistics_fragment" />
-        <action
-            android:id="@+id/action_home_fragment_to_logs_fragment"
-            app:destination="@id/logs_fragment" />
+            android:id="@+id/action_actuatorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/script_fragment"
+        android:id="@+id/electricityFragment"
+        android:name="com.kembrij.smarthomeapp.ui.electricity_screen.ElectricityFragment"
+        android:label="fragment_electricity"
+        tools:layout="@layout/fragment_electricity" >
+        <action
+            android:id="@+id/action_electricityFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/heatingFragment"
+        android:name="com.kembrij.smarthomeapp.ui.heating_screen.HeatingFragment"
+        android:label="fragment_heating"
+        tools:layout="@layout/fragment_heating" >
+        <action
+            android:id="@+id/action_heatingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lockFragment"
+        android:name="com.kembrij.smarthomeapp.ui.lock_screen.LockFragment"
+        android:label="fragment_locks"
+        tools:layout="@layout/fragment_locks" >
+        <action
+            android:id="@+id/action_lockFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scriptFragment"
         android:name="com.kembrij.smarthomeapp.ui.script_screen.ScriptFragment"
-        android:label="Scripts"
-        tools:layout="@layout/script_fragment">
-
+        android:label="fragment_scripts"
+        tools:layout="@layout/fragment_scripts" >
+        <action
+            android:id="@+id/action_scriptFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/statistics_fragment"
-        android:name="com.kembrij.smarthomeapp.ui.statistics_screen.StatisticsFragment"
-        android:label="Statistics"
-        tools:layout="@layout/statistics_fragment">
 
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kembrij.smarthomeapp.ui.home_screen.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_lightingFragment"
+            app:destination="@id/lightingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sensorFragment"
+            app:destination="@id/sensorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_climateFragment"
+            app:destination="@id/climateFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_heatingFragment"
+            app:destination="@id/heatingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_actuatorFragment"
+            app:destination="@id/actuatorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_electricityFragment"
+            app:destination="@id/electricityFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scriptFragment"
+            app:destination="@id/scriptFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_lockFragment"
+            app:destination="@id/lockFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/logs_fragment"
-        android:name="com.kembrij.smarthomeapp.ui.log_screen.LogFragment"
-        android:label="Logs"
-        tools:layout="@layout/log_fragment">
 
+
+    <fragment
+        android:id="@+id/lightingFragment"
+        android:name="com.kembrij.smarthomeapp.ui.lighting_screen.LightingFragment"
+        android:label="fragment_lighting"
+        tools:layout="@layout/fragment_lighting" >
+        <action
+            android:id="@+id/action_lightingFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/climateFragment"
+        android:name="com.kembrij.smarthomeapp.ui.climate_screen.ClimateFragment"
+        android:label="fragment_climate"
+        tools:layout="@layout/fragment_climate" >
+        <action
+            android:id="@+id/action_climateFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 
 

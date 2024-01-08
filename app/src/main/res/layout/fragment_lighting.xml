@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lighting_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.Smarthomeapp"
+    tools:context=".ui.lighting_screen.LightingFragment"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_margin="00dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:id="@+id/kitchen_cv_light_Id"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/seed"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Кухня"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.Smarthomeapp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:id="@+id/corridor_cv_light_Id"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/seed"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Коридор"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.Smarthomeapp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:id="@+id/livingroom_cv_light_Id"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/seed"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Гостиная"
+                    android:layout_gravity="center"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.Smarthomeapp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:id="@+id/bedroom_cv_light_Id"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/seed"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Спальня"
+                    android:textColor="@color/background"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:theme="@style/Theme.Smarthomeapp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_margin="10dp"
+                android:id="@+id/bathroom_cv_light_Id"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/seed"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ванная"
+                    android:textColor="@color/background"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.Smarthomeapp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+
+
+    </HorizontalScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fcvMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</LinearLayout>

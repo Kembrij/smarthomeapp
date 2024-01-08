@@ -8,16 +8,34 @@
     <string name="Scripts">Сценарии</string>
     <string name="Statistics">Статистика</string>
     <string name="Home">Дом</string>
-    <string name="username_hint">Username</string>
-    <string name="password_hint">Password</string>
+    <string name="username_hint">Имя пользователя</string>
+    <string name="password_hint">Пароль</string>
     <string name="status_hint">Status</string>
     <string name="search_hint">Search</string>
 
-    <string name="password_repeat_hint">Repeat password</string>
+    <string name="password_repeat_hint">Введите пароль еще раз</string>
     <string name="group_name_hint">Group name</string>
-    <string name="login_button_text">Login</string>
-    <string name="register_button_text">Register</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="create_account">Don\'t have account? <font color="#904279">Sign up</font></string>
-    <string name="account_exists">Already have account? <font color="#904279">Sign in</font></string>
+    <string name="login_button_text">Вход</string>
+    <string name="register_button_text">Зарегистрируйтесь</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="create_account">Еще нет аккаунта? <font color="#904279">Зарегистрируйтесь.</font></string>
+    <string name="account_exists">Уже есть аккаунт? <font color="#904279">Войти</font></string>
+    <string name="lighting_gf_text">Яркость</string>
+    <string name="error_mqtt_subscription">error_mqtt_subscription</string>
+
+
+    <string name="app_name">andColorPicker Sample</string>
+    <string name="title_toolbar_subtitle">Color picking made easy</string>
+    <string name="title_dynamic">Dynamic</string>
+    <string name="title_dynamic_color_component">Dynamic color component</string>
+    <string name="title_coloring_mode">Coloring mode</string>
+    <string name="title_coloring_mode_pure">Pure</string>
+    <string name="title_coloring_mode_output">Output</string>
+    <string name="title_coloring_mode_plain">Plain</string>
+    <string name="action_set_random_color">Randomize</string>
+    <string name="title_work_in_progress">Work In Progress :D</string>
+    <string name="action_show_dialog">Show dialog</string>
+    <string name="title_lab_l">L</string>
+    <string name="title_lab_a">A</string>
+    <string name="title_lab_b">B</string>
 </resources>
